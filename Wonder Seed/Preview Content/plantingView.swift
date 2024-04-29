@@ -11,8 +11,11 @@ struct plantingView: View {
     var body: some View {
         
         @Environment(\.dismiss)  var dismiss
-        ZStack{
-           
+        ZStack(){
+            Rectangle()
+                .foregroundColor(Color("S1-100"))
+                .frame(height: .infinity)
+
             
             VStack(alignment: .leading){
                 Button(action: {
@@ -22,32 +25,66 @@ struct plantingView: View {
                     Image(systemName: "chevron.backward.circle")
                         .resizable()
                         .aspectRatio(contentMode: .fit)
-                        .foregroundColor(Color.P_700)
+                        .foregroundColor(Color("P-700"))
                         .frame(width: 30, height: 30)
-                }.padding(27)
-                Rectangle()
-                    .foregroundColor(.white)
-                Rectangle()
-                    .foregroundColor(Color("grassColor"))
-                    .ignoresSafeArea()
-                    .frame(height: 255)
+                }.padding(EdgeInsets(top: 78, leading: 27, bottom: 0, trailing: 0))
                 
+                Spacer()
+                Rectangle()
+                    .foregroundColor(Color("P-600"))
+                    .frame(height: 255, alignment: .bottom)
             }
-            Image("bibit").resizable()
+            
+            
+            Image("bibitStage1").resizable()
                 .aspectRatio(contentMode: .fit)
-                .frame(width: 170, height: 250
-                )
-                .position(x: 190, y:500)
-//                .position(x: UIScreen.main.bounds.width
-//                          , y: UIScreen.main.bounds.height
-//                )
+                .frame(width: 25, height: 86)
+                .position(x: 190, y:600)
             
             .navigationBarBackButtonHidden()
             
-        }
+        }.ignoresSafeArea()
     }
 }
 
+struct AnimatedImage: View {
+  @State /*private*/ var image: Image?
+  /*private*/ let imageNames: [String]
+
+  var body: some View {
+    Group {
+      image?
+          .resizable()
+          .scaledToFit()
+    }.onAppear(perform: {
+      self.animate()
+    })
+  }
+  
+  /*private*/ func animate() {
+    var imageIndex: Int = 0
+  
+    Timer.scheduledTimer(withTimeInterval: 0.025, repeats: true) { timer in
+      if imageIndex < self.imageNames.count {
+        self.image = Image(self.imageNames[imageIndex])
+        imageIndex += 1
+      }
+      else {
+        timer.invalidate()
+      }
+    }
+  }
+}
+
+struct contentView: View {
+  var imageNames: [String] = ["bibitStage1", "bibitStage2"]
+  var body: some View {
+    AnimatedImage(imageNames: imageNames)
+  }
+}
+
 #Preview {
-    plantingView()
+//    plantingView()
+    contentView()
+    
 }
