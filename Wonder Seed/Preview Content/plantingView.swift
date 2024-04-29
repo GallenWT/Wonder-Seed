@@ -36,7 +36,7 @@ struct plantingView: View {
             }
             
             
-            Image("bibitStage1").resizable()
+            AnimatedImage(imageNames: ["bibitStage1", "bibitStage2", "bibitStage3"])/*.resizable()*/
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 25, height: 86)
                 .position(x: 190, y:600)
@@ -48,43 +48,36 @@ struct plantingView: View {
 }
 
 struct AnimatedImage: View {
-  @State /*private*/ var image: Image?
-  /*private*/ let imageNames: [String]
+    @State private var image: Image = Image("")
+    var imageNames: [String]
 
-  var body: some View {
-    Group {
-      image?
-          .resizable()
-          .scaledToFit()
-    }.onAppear(perform: {
-      self.animate()
-    })
-  }
-  
-  /*private*/ func animate() {
-    var imageIndex: Int = 0
-  
-    Timer.scheduledTimer(withTimeInterval: 0.025, repeats: true) { timer in
-      if imageIndex < self.imageNames.count {
-        self.image = Image(self.imageNames[imageIndex])
-        imageIndex += 1
-      }
-      else {
-        timer.invalidate()
-      }
+    var body: some View {
+        Group {
+            image
+                .resizable()
+                .scaledToFit()
+        }.onAppear(perform: {
+            self.animate()
+        })
+        .transition(.opacity)
     }
-  }
-}
-
-struct contentView: View {
-  var imageNames: [String] = ["bibitStage1", "bibitStage2"]
-  var body: some View {
-    AnimatedImage(imageNames: imageNames)
-  }
+    
+    private func animate() {
+        var imageIndex: Int = 0
+  
+        Timer.scheduledTimer(withTimeInterval: 1.4, repeats: true) { timer in
+            if imageIndex < self.imageNames.count {
+                self.image = Image(self.imageNames[imageIndex])
+                imageIndex += 1
+            }
+            else {
+                timer.invalidate()
+            }
+        }
+    }
 }
 
 #Preview {
-//    plantingView()
-    contentView()
-    
+        plantingView()
+//    AnimatedImage(imageNames: ["bibitStage1", "bibitStage2", "bibitStage3", "bibitStage4", "bibitStage5", "bibitStage6", "bibitStage7"])
 }
