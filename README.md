@@ -1,8 +1,8 @@
-# Welcome to "Wonder Seed" App Respository
+# 🌱 Wonder Seed
 
 Wonder Seed is an educational and entertainment app in which designed to impresss friends at Apple Academy as part of the challenges given. This engaging game uses stunning visual animations to teach users about different types of plants. With Wonder Seed, users will receive random seeds and utilize various tools to support plant growth. The app provides new knowledge about specific plants, allowing users to discover what they are growing as the plant matures and bears easily recognizable fruit. By incorporating several Apple Technologies, Wonder Seed offers an exciting and interactive learning experience.
 
-## Tech Stack
+## 🛠️ Tech Stack
 🎮 SpriteKit
 <br />🏃 CoreMotion
 <br />🐦 SwiftUI
@@ -11,7 +11,7 @@ Wonder Seed is an educational and entertainment app in which designed to impress
 <br />☀️ SunKit
 <br />🔊 AVFoundation
 
-## Features:
+## ✨ Features:
 ✅ **Random Seed Selection:**
 <br />Users will be given a seeds randomly, adding an element of surprise and discovery to the learning process.
 
@@ -30,14 +30,22 @@ Wonder Seed is an educational and entertainment app in which designed to impress
 <br />✅ **Achievement Page:**
 <br />Once users have successfully nurtured their plants and produced fruit, they can click on the fruit to be directed to the Achievement Page. Here, users will discover many new seeds to explore, allowing them to continue their gardening journey by repeating the gameplay process.
 
-## Requirements:
+## 📱 Requirements:
 Currently available only on iPhone, as it doesn't support the interface of any other devices.
 
-## How to Play:
+## 🕹️ How to Play:
 Upon entering the app, users are encouraged to shake their phone to receive a random seed. They will then be directed to a page where they can nurture their plant. This involves directing sunlight based on the real sun's direction from their location (currently set only to Jakarta, Indonesia, not based on users exact location), watering the plant, and adding fertilizer. Once the plant is fully nurtured, a fruit (currently only apples) will fall. Users can click on the fruit to be directed to the Achievement Page, where they can see the seeds they have unlocked. They can continue unlocking new seeds by repeating the gameplay process.
 
-## Video App Demo:
+## 📹 Video App Demo:
 [Click me to view!](https://youtube.com/shorts/_Dl8v3_9KLg?feature=shared)
+
+## 🧑‍🤝‍🧑 Team Members
+
+- **Gallen Winslow Tantosa** – Product Designer  
+- **Bryan Vernanda** – Software Engineer  
+- **Romi Fadhurrohman Nabil** – Software Engineer  
+
+🔍 For more project details from Gallen: [bit.ly/gwtportfolio](https://bit.ly/gwtportfolio)
 
 ## ⚠️ Disclaimer:
 This app is not yet 100% complete, only main features that have been implemented. The seed and plant database has not been fully imported, and there are issues with the Achievement Page code and its animations that need optimization.
