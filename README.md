@@ -52,6 +52,10 @@ This app is not yet 100% complete, only main features that have been implemented
 For a deeper look into the design process, goals, and implementation insights of this project,  
 please visit my portfolio: [bit.ly/gwtportfolio](https://bit.ly/gwtportfolio)
 
-<br />
 <br />If you encounter any issues or have suggestions for improvements, please let me know.
+
+## © Copyright  
+© 2025 Gallen Winslow Tantosa, Bryan Vernanda, Romi Fadhurrohman Nabil. All rights reserved.  
+This project was developed for educational and collaborative purposes. Please do not reproduce or distribute without permission.
+
 
