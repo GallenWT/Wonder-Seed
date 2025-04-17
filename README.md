@@ -45,10 +45,12 @@ Upon entering the app, users are encouraged to shake their phone to receive a ra
 - **Bryan Vernanda** – Software Engineer  
 - **Romi Fadhurrohman Nabil** – Software Engineer  
 
-🔍 For more project details from Gallen: [bit.ly/gwtportfolio](https://bit.ly/gwtportfolio)
-
 ## ⚠️ Disclaimer:
 This app is not yet 100% complete, only main features that have been implemented. The seed and plant database has not been fully imported, and there are issues with the Achievement Page code and its animations that need optimization.
+
+## 🌐 Learn More  
+For a deeper look into the design process, goals, and implementation insights of this project,  
+please visit my portfolio: [bit.ly/gwtportfolio](https://bit.ly/gwtportfolio)
 
 <br />
 <br />If you encounter any issues or have suggestions for improvements, please let me know.
